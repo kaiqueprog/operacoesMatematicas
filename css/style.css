@@ -1,0 +1,252 @@
+body {
+    overflow-Y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    background: url('../img/fundo.jpg') top;
+}
+/* Formatação geral
+*********************************/
+ul {
+    list-style: none;
+    position: fixed;
+    right: 10px;
+    top: 0;
+    text-align: center;
+}
+b {
+    display: none;
+}
+li i {
+    font-size: 1.4em;
+    color: royalblue;
+    background-color: #fff;
+    border-radius: 30%;
+    padding: 5px;
+    transition: all 0.3s ease;
+}
+li i:hover {
+    color: #fff;
+    background-color: royalblue;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    transform: scale(1.1);
+}
+li {
+    display: inline;
+    cursor: pointer;
+}
+
+/* Formatação Pontuação
+*********************************/
+.pontuacao {
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: rgb(227, 248, 38);
+    color: #fff;
+    position: fixed;
+    left: 10px;
+    top: 4px;
+}
+.t-pontos {
+    width: 200px;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: rgb(255, 81, 0);
+    font-size: 30px;
+}
+.t-pontos i {
+    float: right;
+    margin: 2px 3px;
+    transition: all 0.4s ease;
+}
+.t-pontos i:hover {
+    color: gold;
+    transform: rotate(360deg);
+}
+#pontos {
+    text-align: center;
+    font-size: 5.7em;
+}
+
+
+/* Formatação Jogo
+*********************************/
+.container {
+    position: absolute;
+    top: 20%;
+    text-align: center;
+    width: 423px;
+}
+
+#text {
+    position: relative;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-shadow:2px 2px 2px black;
+    font-family: 'Ubuntu',sans-serif;
+    color: rgb(227, 248, 38);
+}
+#text::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 260px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+
+}
+#text::after {
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color:white;
+    padding: 5px;
+    transform: translateX(-50%);
+    text-shadow:2px 2px 2px black;
+    content: 'Clique nas operaçãoes';
+}
+
+
+#n1,#n2 {
+    width: 200px;
+    height: 200px;
+    border: 2px solid rgb(65, 61, 61);
+    float: left;
+    margin-right: 5px;
+    border-radius: 6px;
+    font-size: 80px;
+    text-align: center;
+    line-height: 200px;
+    font-family: 'Times New Roman', Times, serif;
+    outline: none;
+}
+#n1 {
+    background: rgb(216, 216, 216);
+    font-size: 78px;
+}
+button {
+    width: 98%;
+    height: 40px;
+    margin-top: 10px;
+    font-size: 20px;
+    justify-items: center;
+    outline: none;
+    color: rgb(255, 240, 240);
+    background: royalblue;
+    border: 1px solid royalblue;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: rgb(23, 81, 255);
+    color: white;
+}
+
+/* Formatação Rodapé
+*********************************/
+.sejaBemVindoNovamente {
+    transition: all 0.3s ease;
+    position: fixed;
+    background-color: #222;
+    text-align: center;
+    color: rgb(172, 172, 172);
+    width: 100%;
+    bottom: -1000%;
+    transition: all 0.3s ease;
+}
+.sejaBemVindoNovamente p {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+.sejaBemVindoNovamente span {
+    font-weight: 500;
+    color: royalblue;
+}
+
+
+
+@media (max-width: 575px) {
+    body {
+        max-width: 400px;
+    }
+    /* Formatação Pontuação
+*********************************/
+.pontuacao {
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: rgb(227, 248, 38);
+    color: #fff;
+    position: fixed;
+    left: 10px;
+    top: 4px;
+}
+.t-pontos {
+    width: 130px;
+    padding: 5px;
+    border-radius: 6px;
+    background-color: rgb(255, 81, 0);
+    font-size: 25px;
+}
+.t-pontos i {
+    float: right;
+    margin: 2px 3px;
+    transition: all 0.4s ease;
+}
+.t-pontos i:hover {
+    color: gold;
+    transform: rotate(360deg);
+}
+#pontos {
+    text-align: center;
+    font-size: 4em;
+}
+    .container {
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        left: 2.5%;
+    }
+    #text {
+        position: relative;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        text-shadow:2px 2px 2px black;
+        font-family: 'Ubuntu',sans-serif;
+        color: rgb(227, 248, 38);
+    }
+    #text::after {
+        font-size: 15px;
+    
+    }
+    #n1,#n2 {
+        width: 45%;
+        height: 160px;
+        font-size: 50px;
+        line-height: 160px;
+    }
+    #n1 {
+        background: rgb(216, 216, 216);
+    }
+    button {
+        width:30%;
+        height: 40px;
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .sejaBemVindoNovamente p {
+        font-size: 20px;
+    }
+}

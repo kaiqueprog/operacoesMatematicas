@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Adivinhar Número</title>
+</head>
+<body onload="carregou()">
+        <section class="pontuacao">
+            <div class="t-pontos">
+                <span>Pontos</span>
+                <i onclick="reiniciar()" class="fas fa-redo-alt"></i>
+            </div>
+            <div id="pontos"></div>
+        </section>
+        <aside>
+            <ul>
+                <li onclick="somar()"><i class="fas fa-plus"><b>soma</b> </i></li>
+                <li onclick="subtrair()"><i class="fas fa-minus"><b>subtracao</b></i></li>
+                <li onclick="multiplicar()"><i class="fas fa-times"><b>multiplicacao</b></i></li>
+                <li onclick="dividir()"><i class="fas fa-divide"><b>divisao</b></i></li>
+            </ul>
+        </aside>
+    <div class="container">
+        <h2 id="text">Vamos começar?</h2>
+        <div id="n1"><span id="valor1"></span><strong id="operacao"></strong><span id="valor2"></span></div>
+        <input type="text" id="n2" onkeyup="ApertouBotao(event)">
+        <div style="clear: both;"></div>
+        <button onclick="verificarNumero()">Verificar</button>
+    </div>
+
+    <!-- Seja bem vindo novamente -->
+    <div id="rodape" class="sejaBemVindoNovamente">
+        <p>Seja bem vindo(a) <span id="seuNome"></span></p>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
