@@ -2,7 +2,7 @@ let pontos = document.getElementById('pontos').innerHTML = localStorage.pontuaca
 let pontuacao = 0;
 function carregou() {//ao carregar a pagina
     
-     if (localStorage.pontuacao == 'undefined') {
+     if (localStorage.pontuacao == 'undefined' || document.getElementById('pontos').innerHTML == 'undefined') {
         parseInt(document.getElementById('pontos').innerHTML = 0);
     }
     
