@@ -1,10 +1,11 @@
 let pontos = document.getElementById('pontos').innerHTML = localStorage.pontuacao;
 let pontuacao = 0;
+
+if (localStorage.pontuacao == 'undefined' || document.getElementById('pontos').innerHTML == 'undefined') {
+        document.getElementById('pontos').innerHTML = 0;
+}
+
 function carregou() {//ao carregar a pagina
-    
-     if (localStorage.pontuacao == 'undefined' || document.getElementById('pontos').innerHTML == 'undefined') {
-        parseInt(document.getElementById('pontos').innerHTML = 0);
-    }
     
     let rodape = document.getElementById('rodape');
     setTimeout(rodape.setAttribute("style", "bottom: 0%;"), 1000);
